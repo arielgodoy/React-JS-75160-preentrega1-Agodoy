@@ -22,7 +22,15 @@ const Productos = () => {
     fetchProductos();
   }, []);
 
-  if (loading) return <h2>Cargando productos...</h2>;
+  if (loading) 
+    return (
+      <div className="d-flex justify-content-center mt-5">
+        <div className="spinner-border text-primary" role="status">
+          <span className="visually-hidden">Cargando...</span>
+        </div>
+      </div>
+    );
+  
   if (error) return <h2>{error}</h2>;
 
   return (

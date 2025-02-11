@@ -6,13 +6,8 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Productos from "./components/Productos";
 
-
-
-// Crea componentes básicos para las rutas
-
-
 function App() {
-  const [cartCount, setCartCount] = useState(0); // Estado global del carrito
+  const [cartCount, setCartCount] = useState(0); 
   return (
     <Router>
       <Navbar cartCount={cartCount} />
@@ -20,7 +15,7 @@ function App() {
         <Route path="/" element={<ItemListContainer mensaje="¡Bienvenido a nuestra tienda!" setCartCount={setCartCount} />} />
         <Route path="/contacto" element={<Contact />} />
         <Route path="/about" element={<About />} />        
-        <Route path="/productos" element={<Productos />} /> {/* Nueva ruta */}
+        <Route path="/productos" element={<Productos />} />
       </Routes>
     </Router>
   );

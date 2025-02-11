@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const Navbar = ({ cartCount }) => {  // Recibe cartCount como prop
+const Navbar = ({ cartCount }) => {  // X prop
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -32,7 +32,7 @@ const Navbar = ({ cartCount }) => {  // Recibe cartCount como prop
             <Link to="/carrito" className="nav-link text-white position-relative">
               <i className="bi bi-cart" style={{ fontSize: "1.5rem" }}></i>
               <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                {cartCount} {/* Muestra la cantidad de ítems */}
+                {cartCount} {/* Muestra el cartcount */}
               </span>
             </Link>
           </div>
